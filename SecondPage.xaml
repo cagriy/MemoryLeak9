@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MemoryLeak9.SecondPage">
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="1*,9*" HorizontalOptions="Fill">
+            <ImageButton Source="dotnet_bot.png" Grid.Column="0" Margin="10" 
+                         HorizontalOptions="Center"
+                         Clicked="ImageButton_Clicked"
+                         ZIndex="1">
+                         
+            </ImageButton>
+            <Label Grid.ColumnSpan="2"
+                   Text="Settings"
+                   CharacterSpacing="1"
+                   TextColor="#ff8e00"
+                   FontSize="24"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+        </Grid>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <Grid ColumnDefinitions="5.7*,0.8*,3.5*" RowDefinitions="*,*,*,*,*,*,*,*,*,*">
+            <VerticalStackLayout>
+                <Label Text="Test Label" />
+                <Label x:Name="L1" Text="Test Label" />
+            </VerticalStackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
