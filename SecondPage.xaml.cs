@@ -1,21 +1,17 @@
 namespace MemoryLeak9;
 
+public class Topic
+{
+    public string Name { get; set; } = "";
+}
 public partial class SecondPage : ContentPage
 {
     public SecondPage()
     {
         InitializeComponent();
-        Appearing += (_, _) =>
+        Unloaded += (_, _) =>
         {
-            var mem = (int)(GC.GetTotalMemory(false) / 1024d);
-            Title = mem.ToString();
-            L1.Text = mem.ToString();
-            L1.IsVisible = false;
+            MEVideo.Handler?.DisconnectHandler();
         };
-    }
-
-    private void ImageButton_Clicked(object? sender, EventArgs e)
-    {
-        Shell.Current.GoToAsync("..");
     }
 }

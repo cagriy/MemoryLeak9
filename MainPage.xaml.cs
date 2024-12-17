@@ -1,6 +1,6 @@
 ﻿namespace MemoryLeak9;
 
-public partial class MainPage : ContentPage
+public partial class MainPage
 {
     public MainPage()
     {
@@ -13,10 +13,10 @@ public partial class MainPage : ContentPage
         GC.Collect();
         GC.WaitForPendingFinalizers();
         var mem = (int)(GC.GetTotalMemory(false) / 1024d);
-        CounterBtn.Text = mem.ToString();
+        BtnSecondPage.Text = mem.ToString();
     }
 
-    private void OnCounterClicked(object sender, EventArgs e)
+    private void OnSecondClicked(object sender, EventArgs e)
     {
         Shell.Current.GoToAsync(nameof(SecondPage));
     }

@@ -6,7 +6,6 @@
     xmlns:local="clr-namespace:MemoryLeak9"
     Shell.FlyoutBehavior="Flyout"
     Title="MemoryLeak9">
-
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
