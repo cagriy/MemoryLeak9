@@ -7,8 +7,5 @@
              maui:LeakMonitorBehavior.Cascade="True"
              x:Class="MemoryLeak9.SecondPage">
     
-    <Grid>
-        <Label Text="Test" />
         <toolkit:MediaElement x:Name="MEVideo"/>
-    </Grid>
 </ContentPage>

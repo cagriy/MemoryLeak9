@@ -8,6 +8,9 @@ public partial class SecondPage : ContentPage
 {
     public SecondPage()
     {
+        
+
+    
         InitializeComponent();
         Unloaded += (_, _) =>
         {
